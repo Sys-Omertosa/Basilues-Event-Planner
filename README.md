@@ -129,20 +129,20 @@ npm run dev
 
 ### Interactive Modals
 
--   💳 **Payment Modal**: 
-    - 3-step payment flow (form → processing → success)
-    - Card validation and formatting
-    - Billing address collection
-    - Simulated Stripe integration
--   📝 **Inquiry Modal**: 
-    - Sponsor inquiry forms
-    - Consultation scheduling
-    - Company information collection
--   📋 **Application Modal**: 
-    - Community membership applications
-    - Multi-field forms with validation
-    - Interest selection chips
-    - Character count validation
+-   💳 **Payment Modal**:
+    -   3-step payment flow (form → processing → success)
+    -   Card validation and formatting
+    -   Billing address collection
+    -   Simulated Stripe integration
+-   📝 **Inquiry Modal**:
+    -   Sponsor inquiry forms
+    -   Consultation scheduling
+    -   Company information collection
+-   📋 **Application Modal**:
+    -   Community membership applications
+    -   Multi-field forms with validation
+    -   Interest selection chips
+    -   Character count validation
 
 ### UI/UX Enhancements
 
@@ -286,12 +286,13 @@ Built as part of Web Engineering Lab 13, extended with premium features includin
 ## 🚀 Live Demo
 
 The application demonstrates:
-- React state management best practices
-- Immutable data updates
-- Component composition and reusability
-- Form validation and error handling
-- Professional UI/UX design patterns
-- Responsive layouts for all devices
+
+-   React state management best practices
+-   Immutable data updates
+-   Component composition and reusability
+-   Form validation and error handling
+-   Professional UI/UX design patterns
+-   Responsive layouts for all devices
 
 ---
 
