@@ -1,6 +1,6 @@
-# Event Planner App - Lab 13
+# BASILEUS Event Planner - Lab 13
 
-A modern, interactive Event Planner application built with React, demonstrating core React concepts including state management, event handling, and component composition.
+A premium, full-featured Event Planner application built with React, featuring multi-page navigation, interactive modals, payment processing mockups, and a sophisticated royal gold design theme. Demonstrates advanced React concepts including state management, routing, form validation, and professional UI/UX patterns.
 
 ## 🎯 Lab Requirements Fulfilled
 
@@ -28,22 +28,26 @@ A modern, interactive Event Planner application built with React, demonstrating 
 -   ✅ **Conditional Rendering**: Empty state message when no guests
 -   ✅ **Styled Confirmed Guests**: Different visual treatment for confirmed guests
 
-## 🎨 Design Features
+## 🎨 Design Features - BASILEUS Theme
 
-Based on the provided UI reference, the app includes:
+Premium royal aesthetic with sophisticated visual elements:
 
--   **Professional Design**: Turquoise (#4FD1C5) and dark theme color scheme
+-   **Royal Gold Color Scheme**: #D4AF37, #FFD700, #B8860B
+-   **Dark Luxury Theme**: #0A0A0A, #050505, #1A1512 backgrounds
+-   **Sharp Corners**: Border-radius: 0 for premium aesthetic
+-   **Ethereal Glow**: Animated background with dynamic gold effects
 -   **Typography**:
-    -   Playfair Display (serif) for headings
-    -   Inter (sans-serif) for body text
--   **Material UI**: Enhanced UX with MUI components
--   **Lucide React Icons**: Professional iconography throughout
--   **Smooth Animations**:
-    -   Fade-in effects
-    -   Slide animations
-    -   Hover transitions
-    -   Scale effects
-    -   Button feedback
+    -   Playfair Display (serif) for elegant headings
+    -   Inter (sans-serif) for readable body text
+-   **Crown Icon**: Royal branding throughout
+-   **Material UI**: Enhanced UX with customized components
+-   **Lucide React Icons**: Professional iconography (Crown, CreditCard, Lock, Users, Building2, etc.)
+-   **Advanced Animations**:
+    -   Fade-in effects with backdrop blur
+    -   Slide animations for modals
+    -   Hover glow transitions
+    -   Loading spinners
+    -   Success screen animations
 
 ## 🚀 Technologies Used
 
@@ -105,21 +109,51 @@ npm run dev
 
 ## 🎯 Features
 
-### Guest Management
+### Multi-Page Navigation System
+
+-   🎉 **Events Page**: Original guest management functionality
+-   📈 **Growth Page**: Event analytics, metrics, and growth strategies
+-   🤝 **Sponsors Page**: Partnership tiers and current sponsors with inquiry system
+-   👥 **Community Page**: Community statistics, benefits, and testimonials
+-   💎 **Membership Page**: Pricing tiers (Silver/Gold/Platinum) with payment integration
+-   🔐 **Auth Page**: Full-page authentication with sign in/sign up
+
+### Guest Management (Events Page)
 
 -   ➕ **Add Guests**: Form with validation for name and email
 -   ✏️ **Edit Guests**: In-place editing with save/cancel
--   🗑️ **Remove Guests**: Delete with confirmation
+-   🗑️ **Remove Guests**: Delete with confirmation dialog
 -   ✓ **Confirm Guests**: Toggle confirmation status
 -   📧 **RSVP Tracking**: Track RSVP responses
+-   📊 **Live Statistics**: Real-time guest count updates
+
+### Interactive Modals
+
+-   💳 **Payment Modal**: 
+    - 3-step payment flow (form → processing → success)
+    - Card validation and formatting
+    - Billing address collection
+    - Simulated Stripe integration
+-   📝 **Inquiry Modal**: 
+    - Sponsor inquiry forms
+    - Consultation scheduling
+    - Company information collection
+-   📋 **Application Modal**: 
+    - Community membership applications
+    - Multi-field forms with validation
+    - Interest selection chips
+    - Character count validation
 
 ### UI/UX Enhancements
 
--   📊 **Live Statistics**: Real-time guest count updates
--   🎨 **Visual Feedback**: Animated state changes
--   📱 **Responsive Design**: Works on all screen sizes
--   🌈 **Status Badges**: Visual indicators for confirmed/RSVP'd guests
--   ⚡ **Smooth Animations**: Professional transitions and effects
+-   🎨 **Premium Visual Design**: Gold theme with sharp corners
+-   ✨ **Ethereal Background**: Animated glow effects
+-   📱 **Fully Responsive**: Optimized for all screen sizes
+-   🌈 **Status Indicators**: Visual badges for confirmed/RSVP'd guests
+-   ⚡ **Smooth Animations**: Professional transitions throughout
+-   🔒 **Form Validation**: Real-time error checking and feedback
+-   🎭 **Modal Overlays**: Backdrop blur with centered positioning
+-   ⏱️ **Loading States**: Animated spinners during processing
 
 ## 📝 Code Highlights
 
@@ -169,38 +203,64 @@ By completing this lab, you will understand:
 
 ```
 event-planner/
+├── public/
+│   └── crown-favicon.svg          # Royal gold crown favicon
 ├── src/
 │   ├── components/
-│   │   ├── Header.jsx
+│   │   ├── Header.jsx              # Navigation with BASILEUS branding
 │   │   ├── Header.css
-│   │   ├── GuestForm.jsx
+│   │   ├── GuestForm.jsx           # Guest input form
 │   │   ├── GuestForm.css
-│   │   ├── GuestList.jsx
+│   │   ├── GuestList.jsx           # Guest list renderer
 │   │   ├── GuestList.css
-│   │   ├── GuestItem.jsx
+│   │   ├── GuestItem.jsx           # Individual guest card
 │   │   ├── GuestItem.css
-│   │   ├── RSVPSummary.jsx
-│   │   └── RSVPSummary.css
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   └── main.jsx
-├── index.html
+│   │   ├── RSVPSummary.jsx         # Statistics display
+│   │   ├── RSVPSummary.css
+│   │   ├── PaymentModal.jsx        # Payment processing modal
+│   │   ├── PaymentModal.css
+│   │   ├── InquiryModal.jsx        # Sponsor inquiry modal
+│   │   ├── InquiryModal.css
+│   │   ├── ApplicationModal.jsx    # Membership application modal
+│   │   └── ApplicationModal.css
+│   ├── pages/
+│   │   ├── EventsPage.jsx          # Main guest management page
+│   │   ├── EventsPage.css
+│   │   ├── GrowthPage.jsx          # Analytics and metrics
+│   │   ├── GrowthPage.css
+│   │   ├── SponsorsPage.jsx        # Partnership information
+│   │   ├── SponsorsPage.css
+│   │   ├── CommunityPage.jsx       # Community benefits
+│   │   ├── CommunityPage.css
+│   │   ├── MembershipPage.jsx      # Pricing tiers
+│   │   ├── MembershipPage.css
+│   │   ├── AuthPage.jsx            # Authentication page
+│   │   └── AuthPage.css
+│   ├── App.jsx                     # Main app with routing
+│   ├── App.css                     # Global app styles
+│   ├── index.css                   # CSS variables & animations
+│   └── main.jsx                    # React entry point
+├── index.html                      # HTML with crown favicon
 ├── package.json
-└── vite.config.js
+├── vite.config.js
+├── LAB_DOCUMENTATION.md            # Detailed lab implementation docs
+└── README.md
 ```
 
-## 🎨 Color Palette
+## 🎨 Color Palette - BASILEUS Theme
 
--   **Primary Turquoise**: #4FD1C5
--   **Secondary Turquoise**: #38B2AC
--   **Dark Background**: #1A202C
--   **Darker Background**: #0D1117
--   **Card Background**: #2D3748
+-   **Primary Gold**: #D4AF37
+-   **Secondary Gold**: #FFD700
+-   **Dark Gold**: #B8860B
+-   **Light Gold**: #F4E5C3
+-   **Background**: #0A0A0A
+-   **Darker Background**: #050505
+-   **Card Background**: #1A1512
 -   **Light Text**: #E2E8F0
 -   **Muted Text**: #A0AEC0
--   **Success**: #48BB78
--   **Warning**: #ED8936
+-   **White**: #FFFFFF
+-   **Success Green**: #48BB78
+-   **Error Red**: #F56565
 
 ## 📱 Browser Support
 
@@ -209,9 +269,29 @@ event-planner/
 -   Safari (latest)
 -   Edge (latest)
 
+## 🎯 Lab Requirements
+
+All Lab 13 requirements have been fully implemented:
+
+**Part 1**: User interactions with useState, event handling, and component communication
+**Part 2**: State updates with batching demonstrations and useEffect tracking
+**Part 3**: Array manipulation (add, update, remove) with immutable patterns
+
+See `LAB_DOCUMENTATION.md` for detailed implementation explanations.
+
 ## 👨‍💻 Development
 
-Built as part of Web Engineering Lab 13 to demonstrate React fundamentals and modern web development practices.
+Built as part of Web Engineering Lab 13, extended with premium features including multi-page navigation, authentication system, payment processing mockups, and professional modal interactions.
+
+## 🚀 Live Demo
+
+The application demonstrates:
+- React state management best practices
+- Immutable data updates
+- Component composition and reusability
+- Form validation and error handling
+- Professional UI/UX design patterns
+- Responsive layouts for all devices
 
 ---
 
